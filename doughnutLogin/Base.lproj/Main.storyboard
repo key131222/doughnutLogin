@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rS4-m9-zrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rS4-m9-zrA">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--LoginVC-->
         <scene sceneID="S8K-Ij-a2y">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="rS4-m9-zrA" customClass="LoginViewController" customModule="doughnut" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="rS4-m9-zrA" customClass="LoginVC" customModule="doughnutLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EuL-yM-AFI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +58,32 @@
                                     <outlet property="delegate" destination="rS4-m9-zrA" id="Ddo-4Y-Wgm"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awK-yL-ndV">
+                                <rect key="frame" x="347" y="480" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NEI-xS-pWZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Clean">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cleanEmail:" destination="rS4-m9-zrA" eventType="touchUpInside" id="NIF-nh-h5l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k8-8J-my8">
+                                <rect key="frame" x="347" y="550" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eec-RC-RHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Clean">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cleanPassword:" destination="rS4-m9-zrA" eventType="touchUpInside" id="iRS-d9-5Fk"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20z-su-RQC" userLabel="登入">
                                 <rect key="frame" x="30" y="590" width="160" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,6 +117,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9MZ-JQ-D9t">
                                 <rect key="frame" x="30" y="636" width="354" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="0.2925938481" blue="0.48869271199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -115,12 +142,14 @@
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="nJ4-9a-ECq" secondAttribute="trailing" constant="30" id="1Ac-fa-Ka1"/>
                             <constraint firstItem="9MZ-JQ-D9t" firstAttribute="top" secondItem="20z-su-RQC" secondAttribute="bottom" constant="10" id="3yh-lR-GpU"/>
                             <constraint firstItem="Kqp-no-mkT" firstAttribute="top" secondItem="7mg-xS-IVU" secondAttribute="top" constant="150" id="490-hQ-6Rh"/>
+                            <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="2k8-8J-my8" secondAttribute="trailing" constant="30" id="569-xS-ij3"/>
                             <constraint firstItem="atk-qZ-fZw" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="6w1-JG-pyb"/>
                             <constraint firstItem="9MZ-JQ-D9t" firstAttribute="top" secondItem="20z-su-RQC" secondAttribute="bottom" constant="10" id="83l-to-VJ5"/>
                             <constraint firstItem="oa6-WR-LU7" firstAttribute="top" secondItem="nJ4-9a-ECq" secondAttribute="bottom" constant="10" id="8nh-zb-h5i"/>
                             <constraint firstItem="Kqp-no-mkT" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="107" id="Cqt-YQ-uq6"/>
                             <constraint firstItem="9MZ-JQ-D9t" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="GJJ-PC-PSV"/>
                             <constraint firstItem="Dxt-an-DsN" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="GQq-db-pCB"/>
+                            <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="awK-yL-ndV" secondAttribute="trailing" constant="30" id="HQx-hK-8bs"/>
                             <constraint firstItem="Dxt-an-DsN" firstAttribute="top" secondItem="oa6-WR-LU7" secondAttribute="bottom" constant="10" id="IJV-J5-pyh"/>
                             <constraint firstItem="nJ4-9a-ECq" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="JcO-Kh-Nj3"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="9MZ-JQ-D9t" secondAttribute="trailing" constant="30" id="KGD-WE-z4g"/>
@@ -133,6 +162,7 @@
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="atk-qZ-fZw" secondAttribute="trailing" constant="30" id="bsF-S8-3Kn"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="oa6-WR-LU7" secondAttribute="trailing" constant="30" id="cFX-hS-WSD"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="Kqp-no-mkT" secondAttribute="trailing" constant="107" id="cc2-c8-HE4"/>
+                            <constraint firstItem="Dxt-an-DsN" firstAttribute="top" secondItem="awK-yL-ndV" secondAttribute="bottom" constant="10" id="dCk-5t-AUS"/>
                             <constraint firstItem="20z-su-RQC" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="fIJ-hS-4LX"/>
                             <constraint firstItem="d1c-p0-XPD" firstAttribute="top" secondItem="7mg-xS-IVU" secondAttribute="top" constant="320" id="giv-aY-FoY"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="9MZ-JQ-D9t" secondAttribute="trailing" constant="30" id="gkA-MF-kZg"/>
@@ -144,6 +174,7 @@
                             <constraint firstItem="nJ4-9a-ECq" firstAttribute="top" secondItem="Kqp-no-mkT" secondAttribute="bottom" constant="100" id="rrq-0n-s4X"/>
                             <constraint firstItem="9MZ-JQ-D9t" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="sMU-EX-TcM"/>
                             <constraint firstItem="20z-su-RQC" firstAttribute="leading" secondItem="7mg-xS-IVU" secondAttribute="leading" constant="30" id="tmE-jR-7Wv"/>
+                            <constraint firstItem="yge-6I-Fr1" firstAttribute="top" secondItem="2k8-8J-my8" secondAttribute="bottom" constant="10" id="ubc-pe-1vM"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="d1c-p0-XPD" secondAttribute="trailing" constant="160" id="vCx-RF-mKG"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="oa6-WR-LU7" secondAttribute="trailing" constant="30" id="xZW-xF-xhm"/>
                             <constraint firstItem="7mg-xS-IVU" firstAttribute="trailing" secondItem="atk-qZ-fZw" secondAttribute="trailing" constant="30" id="xc7-bV-6oQ"/>
@@ -162,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="26.086956521739133"/>
         </scene>
-        <!--註冊-->
+        <!--RegisterVC-->
         <scene sceneID="l53-GS-bSB">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" id="H8b-8C-n1I" customClass="RegisterViewController" customModule="doughnut" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="H8b-8C-n1I" userLabel="RegisterVC" customClass="RegisterVC" customModule="doughnutLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WUo-nE-66l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +286,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mgz-fz-iOv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="註冊" id="cYz-jO-oB2"/>
+                    <navigationItem key="navigationItem" title="RegisterVC" id="cYz-jO-oB2"/>
                     <connections>
                         <outlet property="tfEmail" destination="4Ne-kq-bUp" id="fNP-tR-dyV"/>
                         <outlet property="tfName" destination="ajI-Yh-FQm" id="oFp-FF-tn5"/>
@@ -266,12 +297,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="071-7m-69Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2879.7101449275365" y="-278.804347826087"/>
+            <point key="canvasLocation" x="2643" y="26"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="ESw-oN-vxF">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="a2p-86-KZW" customClass="MainVC" customModule="doughnut" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="a2p-86-KZW" customClass="MainVC" customModule="doughnutLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gLi-JG-lx4"/>
                         <viewControllerLayoutGuide type="bottom" id="e24-qY-AWV"/>
@@ -304,21 +335,17 @@
                         <viewLayoutGuide key="safeArea" id="Gzq-go-nXb"/>
                     </view>
                     <navigationItem key="navigationItem" id="L0m-7K-UMo">
-                        <barButtonItem key="leftBarButtonItem" title="More" image="person.crop.circle.fill" catalog="system" id="XfO-6J-alS">
-                            <connections>
-                                <action selector="onMoreTapped" destination="a2p-86-KZW" id="zht-Xn-00K"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="More" image="person.crop.circle.fill" catalog="system" id="XfO-6J-alS"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGn-EA-bHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4395.652173913044" y="25.271739130434785"/>
+            <point key="canvasLocation" x="3543" y="25"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="564" height="1003"/>
         <image name="logo" width="219" height="164"/>
-        <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
